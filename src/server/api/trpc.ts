@@ -26,6 +26,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
  * @see https://trpc.io/docs/server/context
  */
 export const createTRPCContext = async (opts: { headers: Headers }) => {
+  
   return {
     db,
     ...opts,
