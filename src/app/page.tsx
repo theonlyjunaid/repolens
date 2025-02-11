@@ -81,7 +81,7 @@ export default async function Home() {
                 <MessageSquare className="h-12 w-12 mb-2" />
                 <h3 className="text-xl font-bold">Ask Questions</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                  Get answers about the repo's structure, code, and more.
+                  Get answers about the repo&rsquo;s structure, code, and more.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
