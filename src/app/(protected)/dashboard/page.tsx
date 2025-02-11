@@ -16,9 +16,9 @@ const DashboardPage = () => {
 
   const user = getUser()
 
-  // if (isLoading) return <div>Loading project details...</div>;
-  // if (isError) return <div>Error: {error?.message}</div>;
-  // if (!project) return <div>No project selected.</div>;
+  if (isLoading) return <div>Loading project details...</div>;
+  if (isError) return <div>Error: {error?.message}</div>;
+  if (!project) return <div>No project selected.</div>;
 
   return (
     <div>
