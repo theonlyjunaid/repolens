@@ -21,6 +21,8 @@ const CreatePage = () => {
     const {register, handleSubmit, reset } = useForm<FormInput>()
 
     const createProject = api.project.createProject.useMutation()
+
+    
     
     const { toast } = useToast()
     const refetch = useRefetch()
