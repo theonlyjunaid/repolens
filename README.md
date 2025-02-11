@@ -19,9 +19,6 @@ Repo Lens helps you quickly understand and navigate your codebase by allowing yo
 - [Project Requirements](#project-requirements)
 - [Visual Image](#visual-image)
 - [Project Installation & Setup](#project-installation--setup)
-- [Project Contribution Guidelines](#project-contribution-guidelines)
-- [Project License](#project-license)
-- [Project Contact Information](#project-contact-information)
 - [Project Conclusion](#project-conclusion)
 
 
@@ -59,7 +56,8 @@ Repo Lens helps you quickly understand and navigate your codebase by allowing yo
 
 ## Visual Image
 
-[Image URL Placeholder] 🖼️
+![Dashboard](https://i.imgur.com/dboTbBA.png)
+
 
 ## Project Installation & Setup
 
@@ -70,17 +68,7 @@ Repo Lens helps you quickly understand and navigate your codebase by allowing yo
 5. (Optional) Use `./start-database.sh` to start a local PostgreSQL database in a Docker container.
 
 
-## Project Contribution Guidelines
 
-[Contribution Guidelines Placeholder] 🤝
-
-## Project License
-
-[License Placeholder] 📜
-
-## Project Contact Information
-
-[Contact Information Placeholder] 📧
 
 ## Project Conclusion
 
