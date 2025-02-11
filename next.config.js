@@ -6,6 +6,13 @@ import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
 const config = {
+    env: {
+    KINDE_SITE_URL: process.env.KINDE_SITE_URL ?? `https://repolens.vercel.app`,
+    KINDE_POST_LOGOUT_REDIRECT_URL:
+      process.env.KINDE_POST_LOGOUT_REDIRECT_URL ?? `https://repolens.vercel.app`,
+    KINDE_POST_LOGIN_REDIRECT_URL:
+      process.env.KINDE_POST_LOGIN_REDIRECT_URL ?? `https://repolens.vercel.app/auth/sync-user-to-db`
+  },
     async rewrites() {
         return [
           // Allow Kinde Auth routes
