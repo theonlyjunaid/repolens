@@ -23,12 +23,12 @@ export default async function Home() {
         :
          <div>
            <div className="text-sm font-medium hover:underline underline-offset-4" >
-         <LoginLink postLoginRedirectURL="http://localhost:3000/sync-user-to-db">Sign In</LoginLink>
+         <LoginLink postLoginRedirectURL="https://repolens.vercel.app/sync-user-to-db">Sign In</LoginLink>
           </div>
 
           <div className="text-sm font-medium hover:underline underline-offset-4" >
             
-         <RegisterLink postLoginRedirectURL="http://localhost:3000/sync-user-to-db">Sign Up</RegisterLink>
+         <RegisterLink postLoginRedirectURL="https://repolens.vercel.app/sync-user-to-db">Sign Up</RegisterLink>
           </div>
 
           </div>}
@@ -56,7 +56,7 @@ export default async function Home() {
             : 
             <div>
                 <Button>
-         <RegisterLink postLoginRedirectURL="http://localhost:3000/sync-user-to-db">Sign up to Get Started</RegisterLink>
+         <RegisterLink postLoginRedirectURL="https://repolens.vercel.app/sync-user-to-db">Sign up to Get Started</RegisterLink>
                 </Button>
 
               </div>}
