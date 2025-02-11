@@ -15,23 +15,23 @@ export default async function Home() {
           <span className="font-bold">Repo Lens</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-        {  (await isAuthenticated()) ? <div> 
-          <div className="text-sm font-medium hover:underline underline-offset-4" >
-          <LogoutLink postLogoutRedirectURL="https://repolens.vercel.app">Log out</LogoutLink>
+          {(await isAuthenticated()) ? <div>
+            <div className="text-sm font-medium hover:underline underline-offset-4" >
+              <LogoutLink postLogoutRedirectURL="/">Log out</LogoutLink>
+            </div>
           </div>
-        </div>  
-        :
-         <div>
-           <div className="text-sm font-medium hover:underline underline-offset-4" >
-         <LoginLink postLoginRedirectURL="https://repolens.vercel.app/sync-user-to-db">Sign In</LoginLink>
-          </div>
+            :
+            <div>
+              <div className="text-sm font-medium hover:underline underline-offset-4" >
+                <LoginLink postLoginRedirectURL="/sync-user-to-db">Sign In</LoginLink>
+              </div>
 
-          <div className="text-sm font-medium hover:underline underline-offset-4" >
-            
-         <RegisterLink postLoginRedirectURL="https://repolens.vercel.app/sync-user-to-db">Sign Up</RegisterLink>
-          </div>
+              <div className="text-sm font-medium hover:underline underline-offset-4" >
 
-          </div>}
+                <RegisterLink postLoginRedirectURL="/sync-user-to-db">Sign Up</RegisterLink>
+              </div>
+
+            </div>}
         </nav>
       </header>
       <main className="flex-1">
@@ -47,21 +47,21 @@ export default async function Home() {
                 </p>
               </div>
               <div className="space-x-4">
-              { (await isAuthenticated()) ?
-              <div>
-              <Button>
-         <Link href={"/dashboard"} >Dashboard</Link>
-                </Button>
-              </div> 
-            : 
-            <div>
-                <Button>
-         <RegisterLink postLoginRedirectURL="https://repolens.vercel.app/sync-user-to-db">Sign up to Get Started.</RegisterLink>
-                </Button>
+                {(await isAuthenticated()) ?
+                  <div>
+                    <Button>
+                      <Link href={"/dashboard"} >Dashboard</Link>
+                    </Button>
+                  </div>
+                  :
+                  <div>
+                    <Button>
+                      <RegisterLink postLoginRedirectURL="/sync-user-to-db">Sign up to Get Started.</RegisterLink>
+                    </Button>
 
-              </div>}
+                  </div>}
 
-             
+
               </div>
             </div>
           </div>
@@ -101,19 +101,19 @@ export default async function Home() {
             </div>
           </div>
         </section>
-        
+
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500 dark:text-gray-400">
           <a href="https://linkedin.com/in/talha-ansarii" target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-4">
-          Made by: Talha Ansari 
+            Made by: Talha Ansari
           </a>
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <a className="text-xs hover:underline underline-offset-4" href="https://github.com/talha-ansarii" target="_blank" rel="noopener noreferrer">
             Github
           </a>
-          
+
         </nav>
       </footer>
     </div>
