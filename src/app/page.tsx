@@ -56,7 +56,7 @@ export default async function Home() {
             : 
             <div>
                 <Button>
-         <RegisterLink postLoginRedirectURL="https://repolens.vercel.app/sync-user-to-db">Sign up to Get Started</RegisterLink>
+         <RegisterLink postLoginRedirectURL="https://repolens.vercel.app/sync-user-to-db">Sign up to Get Started.</RegisterLink>
                 </Button>
 
               </div>}
