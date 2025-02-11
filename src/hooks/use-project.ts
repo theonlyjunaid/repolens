@@ -7,6 +7,7 @@ import {useLocalStorage} from 'usehooks-ts'
 const useProject = () => {
     const { data : projects , isLoading , isError, error} = api?.project?.getProjects?.useQuery()
     const [selectedProjectId, setSelectedProjectId] = useLocalStorage('selectedProject', "")
+    console.log(projects)
     if (isLoading) {
         console.log("Loading projects...");
         return { projects: [], project: null, isLoading };
