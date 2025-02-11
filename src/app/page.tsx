@@ -17,7 +17,7 @@ export default async function Home() {
         <nav className="ml-auto flex gap-4 sm:gap-6">
         {  (await isAuthenticated()) ? <div> 
           <div className="text-sm font-medium hover:underline underline-offset-4" >
-          <LogoutLink>Log out</LogoutLink>
+          <LogoutLink postLogoutRedirectURL="https://repolens.vercel.app">Log out</LogoutLink>
           </div>
         </div>  
         :
