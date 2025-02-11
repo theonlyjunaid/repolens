@@ -10,8 +10,8 @@ export async function GET() {
       throw new Error("something went wrong with authentication" + user);
     }
 
-    console.log("hello")
-    console.log(user)
+    // console.log("hello")
+    // console.log(user)
   
     // check if user exists in your database
     const dbUser = await db.user.findUnique({
