@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, useSidebar } from "@/components/ui/sidebar"
 import useProject from "@/hooks/use-project"
 import { cn } from "@/lib/utils"
-import { Bot, CreditCard, LayoutDashboard, Plus, Presentation } from "lucide-react"
+import { Bot, CreditCard, Github, LayoutDashboard, Plus, Presentation } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -20,16 +20,6 @@ const items = [
         url : '/qa',
         icon : Bot
     },
-    {
-        title : 'Meetings',
-        url : '/meetings',
-        icon : Presentation
-    },
-    {
-        title : 'Billing',
-        url : '/billing',
-        icon : CreditCard
-    }
 
 ]
 
@@ -44,13 +34,16 @@ export function AppSidebar(){
     return (
         <Sidebar collapsible="icon" variant="floating">
             <SidebarHeader className="flex flex-row justify-start items-center" >
+                <Link className="flex gap-2" href={"/"}>
                 <span className=" ">
-                    <Image className=" rounded-full" alt="logo" src="/logo.webp" width={40} height={40} />
+                <Github className="h-6 w-6 mr-2" />
                 </span>
                {open &&
                 <span className="text-xl w-[80%]   font-bold">
                     REPO LENS
                 </span>}
+
+                </Link>
             </SidebarHeader>
             <SidebarContent>
                 <SidebarGroup>

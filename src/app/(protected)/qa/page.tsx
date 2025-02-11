@@ -42,13 +42,7 @@ const QAPage = () => {
           <React.Fragment key={q.id}>
             <SheetTrigger onClick={() => setQuestionIndex(index)}>
               <div className="flex items-center gap-4 bg-white rounded-lg p-4 shadow border">
-                <img
-                  className="rounded-full"
-                  height={30}
-                  width={30}
-                  src={q.user?.imageUrl ?? ""}
-                  alt="user"
-                />
+               
                 <div className="text-left flex flex-col">
                   <div className="flex items-center gap-2">
                     <p className="text-gray-700 line-clamp-1 text-lg font-medium">

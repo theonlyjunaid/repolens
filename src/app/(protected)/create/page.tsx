@@ -19,14 +19,16 @@ type FormInput ={
 const CreatePage = () => {
 
     const {register, handleSubmit, reset } = useForm<FormInput>()
+
     const createProject = api.project.createProject.useMutation()
+    
     const { toast } = useToast()
     const refetch = useRefetch()
+
     function onSubmit(data: FormInput){
         createProject.mutate({
             githubUrl : data.repoUrl,
             name : data.projectName,
-            githubToken : data.githubToken || ""
         },{
             onSuccess : () => {
                 toast({
@@ -70,10 +72,8 @@ const CreatePage = () => {
                         required
                      /> 
                      <div className='h-2'></div>
-                     <Input 
-                        {...register('githubToken')}
-                        placeholder='Github Token (optional)'
-                    />
+                     
+
                      <div className='h-4'></div>
                      <Button disabled={createProject.isPending} type='submit'>
                         Create Project

@@ -9,9 +9,10 @@ export const projectRouter = createTRPCRouter({
         z.object({
             name: z.string(),
             githubUrl: z.string(),
-            githubToken: z.string(),
         })
     ).mutation(async ({ctx,input}) => {
+
+        const githubTOken = process.env.GITHUB_TOKEN;
         const project = await ctx.db.project.create({
             data : {
                 githubUrl : input.githubUrl,
@@ -23,7 +24,7 @@ export const projectRouter = createTRPCRouter({
                 }
             }
         })
-        await indexGithubRepo(project?.id, input?.githubUrl, input?.githubToken)
+        await indexGithubRepo(project?.id, input?.githubUrl, githubTOken)
         await pollCommits(project.id!)
         return project
     } ),
