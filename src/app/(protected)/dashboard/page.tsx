@@ -8,18 +8,25 @@ import CommitLog from './commit-log';
 import AskQuestionCard from './ask-question-card';
 import DeleteProjectButton from './DeleteProjectButton';
 import Readme from './Readme';
+import {useKindeBrowserClient} from "@kinde-oss/kinde-auth-nextjs";
 
 const DashboardPage = () => {
   const { project, isLoading, isError, error } = useProject();
+  const {getUser} = useKindeBrowserClient()
 
-  if (isLoading) return <div>Loading project details...</div>;
-  if (isError) return <div>Error: {error?.message}</div>;
-  if (!project) return <div>No project selected.</div>;
+  const user = getUser()
+
+  // if (isLoading) return <div>Loading project details...</div>;
+  // if (isError) return <div>Error: {error?.message}</div>;
+  // if (!project) return <div>No project selected.</div>;
 
   return (
     <div>
       <div className='flex items-center justify-between flex-wrap gap-y-4'>
         {/* Github Link  */}
+        {
+          user && <div>{user.given_name}</div>
+        }
         <div className='w-fit rounded-md bg-primary px-4 py-3'>
           <div className='flex items-center'>
             <Github className='size-5 text-whitw'/>

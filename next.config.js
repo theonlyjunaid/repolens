@@ -11,16 +11,14 @@ const config = {
     KINDE_POST_LOGOUT_REDIRECT_URL:
       process.env.KINDE_POST_LOGOUT_REDIRECT_URL ?? `https://repolens.vercel.app`,
     KINDE_POST_LOGIN_REDIRECT_URL:
-      process.env.KINDE_POST_LOGIN_REDIRECT_URL ?? `https://repolens.vercel.app/auth/sync-user-to-db`
+      process.env.KINDE_POST_LOGIN_REDIRECT_URL ?? `https://repolens.vercel.app/auth/sync-user-to-db`,
+      
   },
     async rewrites() {
         return [
-          // Allow Kinde Auth routes
           { source: "/api/auth/:path*", destination: "/api/auth/:path*" },
           { source: "/login/oauth2/:path*", destination: "/login/oauth2/:path*" },
-          // Allow the sync-user-to-db route
           { source: "/sync-user-to-db", destination: "/sync-user-to-db" },
-          // Redirect all other paths to `/`
           { source: "/:path*", destination: "/" },
         ];
       },
