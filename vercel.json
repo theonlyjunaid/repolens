@@ -2,6 +2,7 @@
     "rewrites": [
       { "source": "/api/auth/(.*)", "destination": "/api/auth/$1" },
       { "source": "/login/oauth2/(.*)", "destination": "/login/oauth2/$1" },
+      { "source": "/sync-user-to-db", "destination": "/sync-user-to-db" },
       { "source": "/(.*)", "destination": "/" }
     ]
   }
